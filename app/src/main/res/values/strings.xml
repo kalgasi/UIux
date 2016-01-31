@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UI ux</string>
+    <string name="button_activity_permissions">Permission on Activity</string>
+    <string name="button_next">Next Activity</string>
+    <string name="form1">Form 1</string>
+    <string name="form2">Form 2</string>
+</resources>

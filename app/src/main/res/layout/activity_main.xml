@@ -1,0 +1,33 @@
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/button_margin_left_right"
+            android:layout_marginRight="@dimen/button_margin_left_right"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:onClick="openActivityPermission"
+            android:text="@string/button_activity_permissions" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/button_margin_left_right"
+            android:layout_marginRight="@dimen/button_margin_left_right"
+            android:onClick="openForm1"
+            android:text="@string/button_next"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>
