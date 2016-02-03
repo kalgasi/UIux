@@ -28,7 +28,7 @@ public class PermissionRequestActivity extends AppCompatActivity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // All good!
                 } else {
-                    Toast.makeText(this, "Need your location!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Need location access to determine your location", Toast.LENGTH_SHORT).show();
                 }
 
                 break;
