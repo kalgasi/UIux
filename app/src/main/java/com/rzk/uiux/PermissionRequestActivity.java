@@ -71,12 +71,12 @@ public class PermissionRequestActivity extends AppCompatActivity implements Goog
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
-            Toast.makeText(this,"Do not have permission to access location",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Do not have permission to access location", Toast.LENGTH_SHORT).show();
             return;
         }
         Location currentLocation = LocationServices.FusedLocationApi.getLastLocation(client);
-        Toast.makeText(this,""+currentLocation.getLatitude()+","+currentLocation.getLatitude()
-                ,Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "" + currentLocation.getLatitude() + "," + currentLocation.getLatitude()
+                , Toast.LENGTH_LONG).show();
 
     }
 
@@ -87,7 +87,7 @@ public class PermissionRequestActivity extends AppCompatActivity implements Goog
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
-        Toast.makeText(this,"Can't connect to Google Play Service",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Can't connect to Google Play Service", Toast.LENGTH_LONG).show();
 
     }
 }
