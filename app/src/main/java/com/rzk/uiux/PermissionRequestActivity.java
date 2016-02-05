@@ -51,15 +51,13 @@ public class PermissionRequestActivity extends AppCompatActivity implements Goog
 
     @Override
     protected void onStart() {
-        client.connect();
+
         super.onStart();
+        if(client!=null){
+            client.connect();
+        }
     }
 
-    @Override
-    protected void onResume() {
-        client.connect();
-        super.onResume();
-    }
 
     @Override
     protected void onStop() {
@@ -70,13 +68,6 @@ public class PermissionRequestActivity extends AppCompatActivity implements Goog
     @Override
     public void onConnected(Bundle bundle) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             Toast.makeText(this, "Do not have permission to access location", Toast.LENGTH_SHORT).show();
             return;
         }
