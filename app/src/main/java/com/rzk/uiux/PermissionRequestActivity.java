@@ -53,7 +53,7 @@ public class PermissionRequestActivity extends AppCompatActivity implements Goog
     protected void onStart() {
 
         super.onStart();
-        if(client!=null){
+        if (client != null) {
             client.connect();
         }
     }
@@ -72,11 +72,11 @@ public class PermissionRequestActivity extends AppCompatActivity implements Goog
             return;
         }
         Location currentLocation = LocationServices.FusedLocationApi.getLastLocation(client);
-        if(currentLocation!=null)
-        Toast.makeText(this, "" + currentLocation.getLatitude() + "," + currentLocation.getLongitude()
-                , Toast.LENGTH_LONG).show();
-        else{
-            Toast.makeText(this,"Cannot get your location",Toast.LENGTH_SHORT).show();
+        if (currentLocation != null)
+            Toast.makeText(this, "" + currentLocation.getLatitude() + "," + currentLocation.getLongitude()
+                    , Toast.LENGTH_LONG).show();
+        else {
+            Toast.makeText(this, "Cannot get your location", Toast.LENGTH_SHORT).show();
         }
 
     }
